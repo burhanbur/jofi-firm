@@ -79,7 +79,7 @@
 		</header>
 
 		<!-- Hero -->
-		<section id="home" class="hero d-grid align-content-center overflow-hidden" style="background-image:url('{{ asset('images/law-firm.webp') }}');">
+		<section id="home" class="hero d-grid align-content-center overflow-hidden" style="background-image:url('{{ asset('images/hero.jpg') }}');">
 			<div class="hero-content container text-center py-5">
 				<span class="badge rounded-pill badge-brand-soft text-uppercase small">Firma Hukum</span>
 				<h1 class="display-5 fw-semibold mt-3 section-title">Profesional. Berintegritas. Solutif.</h1>
