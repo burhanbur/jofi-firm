@@ -10,6 +10,9 @@
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Favicons: currently using `logo.png` as a fallback. Replace with properly-sized favicon files for best results. -->
+		<link rel="icon" href="{{ asset('images/logo.png') }}" />
+		<link rel="shortcut icon" href="{{ asset('images/logo.png') }}" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
@@ -53,7 +56,7 @@
 		<header class="sticky-top bg-white border-bottom">
 			<nav class="navbar navbar-expand-md navbar-light container py-2">
 				<a class="navbar-brand d-flex align-items-center gap-2" href="#home">
-					<span class="navbar-brand-initials">JP</span>
+					<img src="{{ asset('images/logo.png') }}" alt="JOFI &amp; Partners" style="height:36px; width:auto; border-radius:.25rem; object-fit:contain; background:#fff; padding:2px;" />
 					<span class="fw-semibold text-dark">JOFI &amp; Partners</span>
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
