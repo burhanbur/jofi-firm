@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WSDWC399');</script>
+		<!-- End Google Tag Manager -->
+
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JOFI &amp; Partners — Firma Hukum</title>
-		<meta
-			name="description"
-			content="JOFI &amp; Partners adalah kantor hukum profesional yang berintegritas dan solutif, melayani litigasi dan non-litigasi."
-		/>
+
+		<!-- SEO Meta -->
+		<meta name="description" content="JOFI &amp; Partners adalah kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas, pendekatan strategis, dan dedikasi tinggi untuk kepentingan klien.">
+		<meta name="keywords" content="firma hukum, pengacara, advokat, litigasi, non-litigasi, hukum korporasi, perdata, pidana">
+		<meta name="robots" content="index, follow">
+		<meta name="author" content="JOFI &amp; Partners">
+
+		{{-- <!-- Open Graph / Facebook -->
+		<meta property="og:locale" content="id_ID" />
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="JOFI &amp; Partners">
+		<meta property="og:url" content="{{ url()->current() }}">
+		<meta property="og:title" content="JOFI &amp; Partners — Firma Hukum">
+		<meta property="og:description" content="Kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas dan solusi yang dapat diandalkan.">
+		<meta property="og:image" content="{{ asset('images/logo-2.png') }}">
+		<meta property="og:image:alt" content="Logo JOFI &amp; Partners">
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@jofi_partners">
+		<meta name="twitter:title" content="JOFI &amp; Partners — Firma Hukum">
+		<meta name="twitter:description" content="Kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas dan solusi yang dapat diandalkan.">
+		<meta name="twitter:image" content="{{ asset('images/logo-2.png') }}"> --}}
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<!-- Favicons: currently using `logo.png` as a fallback. Replace with properly-sized favicon files for best results. -->
@@ -52,6 +80,11 @@
 		</style>
 	</head>
 	<body class="bg-white">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSDWC399"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
 		<!-- Header / Navbar -->
 		<header class="sticky-top bg-white border-bottom">
 			<nav class="navbar navbar-expand-md navbar-light container py-2">
