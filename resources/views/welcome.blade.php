@@ -39,9 +39,14 @@
 		<meta name="twitter:image" content="{{ asset('images/logo-2.png') }}">	
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<!-- Favicons: currently using `logo.png` as a fallback. Replace with properly-sized favicon files for best results. -->
-		<link rel="icon" href="{{ asset('images/logo.png') }}" />
-		<link rel="shortcut icon" href="{{ asset('images/logo.png') }}" />
+		<!-- Canonical URL and Favicons -->
+		<link rel="canonical" href="{{ url('/') }}" />
+		<!-- Prefer a root favicon.ico (exists in public/). Google also auto-tries /favicon.ico -->
+		<link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+		<!-- Keep logo.png as legacy fallback for some clients -->
+		<link rel="alternate icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+		<meta name="theme-color" content="#53361D">
 		<link
 			href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
@@ -383,14 +388,27 @@
 	
 	<!-- JSON-LD Structured Data for Google Search -->
 	@php
+	$logoUrl = asset('images/logo-2.png');
 	$ld = [
 		'@context' => 'https://schema.org',
-		'@type' => 'LegalService',
+		// Help Google recognize both the organization and the business subtype
+		'@type' => ['Organization', 'LegalService'],
+		'@id' => url('/').'#organization',
 		'name' => 'JOFI & Partners',
 		'alternateName' => 'JOFI and Partners Law Firm',
 		'url' => url('/'),
-		'logo' => asset('images/logo-2.png'),
-		'image' => asset('images/logo-2.png'),
+		'logo' => [
+			'@type' => 'ImageObject',
+			'url' => $logoUrl,
+			'width' => 512,
+			'height' => 512,
+		],
+		'image' => [
+			'@type' => 'ImageObject',
+			'url' => $logoUrl,
+			'width' => 512,
+			'height' => 512,
+		],
 		'description' => 'JOFI & Partners adalah kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas, pendekatan strategis, dan dedikasi tinggi untuk kepentingan klien.',
 		'address' => [
 			'@type' => 'PostalAddress',
