@@ -382,41 +382,43 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	
 	<!-- JSON-LD Structured Data for Google Search -->
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "LegalService",
-		"name": "JOFI & Partners",
-		"alternateName": "JOFI and Partners Law Firm",
-		"url": "{{ url('/') }}",
-		"logo": "{{ asset('images/logo-2.png') }}",
-		"image": "{{ asset('images/logo-2.png') }}",
-		"description": "JOFI & Partners adalah kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas, pendekatan strategis, dan dedikasi tinggi untuk kepentingan klien.",
-		"address": {
-			"@type": "PostalAddress",
-			"streetAddress": "Gd. Ganeca Blok I Lt. 4, Jl. KH Guru Amin No.234, Duren Tiga, Pancoran",
-			"addressLocality": "Jakarta Selatan",
-			"addressRegion": "DKI Jakarta",
-			"postalCode": "12760",
-			"addressCountry": "ID"
-		},
-		"contactPoint": {
-			"@type": "ContactPoint",
-			"telephone": "+62-811-8952-200",
-			"contactType": "customer service",
-			"email": "partners@jofiandpartners.com",
-			"availableLanguage": ["Indonesian", "English"]
-		},
-		"sameAs": [
-			"https://wa.me/628118952200"
+	@php
+	$ld = [
+		'@context' => 'https://schema.org',
+		'@type' => 'LegalService',
+		'name' => 'JOFI & Partners',
+		'alternateName' => 'JOFI and Partners Law Firm',
+		'url' => url('/'),
+		'logo' => asset('images/logo-2.png'),
+		'image' => asset('images/logo-2.png'),
+		'description' => 'JOFI & Partners adalah kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas, pendekatan strategis, dan dedikasi tinggi untuk kepentingan klien.',
+		'address' => [
+			'@type' => 'PostalAddress',
+			'streetAddress' => 'Gd. Ganeca Blok I Lt. 4, Jl. KH Guru Amin No.234, Duren Tiga, Pancoran',
+			'addressLocality' => 'Jakarta Selatan',
+			'addressRegion' => 'DKI Jakarta',
+			'postalCode' => '12760',
+			'addressCountry' => 'ID',
 		],
-		"priceRange": "$$",
-		"areaServed": {
-			"@type": "Country",
-			"name": "Indonesia"
-		}
-	}
-	</script>
+		'contactPoint' => [
+			'@type' => 'ContactPoint',
+			'telephone' => '+62-811-8952-200',
+			'contactType' => 'customer service',
+			'email' => 'partners@jofiandpartners.com',
+			'availableLanguage' => ['Indonesian','English'],
+		],
+		'sameAs' => [
+			'https://wa.me/628118952200'
+		],
+		'priceRange' => '$$',
+		'areaServed' => [
+			'@type' => 'Country',
+			'name' => 'Indonesia',
+		],
+	];
+	@endphp
+
+	<script type="application/ld+json">{!! json_encode($ld, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT) !!}</script>
 
 	<script>
 		// Tahun dinamis di footer
