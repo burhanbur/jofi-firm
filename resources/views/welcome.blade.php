@@ -41,11 +41,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<!-- Canonical URL and Favicons -->
 		<link rel="canonical" href="{{ url('/') }}" />
-		<!-- Prefer a root favicon.ico (exists in public/). Google also auto-tries /favicon.ico -->
-		<link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
-		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-		<!-- Keep logo.png as legacy fallback for some clients -->
-		<link rel="alternate icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+		<link rel="icon" href="{{ asset('images/logo.png') }}" sizes="any">
+		<link rel="shortcut icon" href="{{ asset('images/logo.png') }}" />
+		<link rel="alternate icon" type="image/png" href="{{ asset('images/logo-2.png') }}" />
 		<meta name="theme-color" content="#53361D">
 		<link
 			href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
