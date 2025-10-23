@@ -19,7 +19,7 @@
 		<meta name="robots" content="index, follow">
 		<meta name="author" content="JOFI &amp; Partners">
 
-		{{-- <!-- Open Graph / Facebook -->
+		<!-- Open Graph / Facebook -->
 		<meta property="og:locale" content="id_ID" />
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="JOFI &amp; Partners">
@@ -27,6 +27,8 @@
 		<meta property="og:title" content="JOFI &amp; Partners — Firma Hukum">
 		<meta property="og:description" content="Kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas dan solusi yang dapat diandalkan.">
 		<meta property="og:image" content="{{ asset('images/logo-2.png') }}">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
 		<meta property="og:image:alt" content="Logo JOFI &amp; Partners">
 
 		<!-- Twitter -->
@@ -34,8 +36,7 @@
 		<meta name="twitter:site" content="@jofi_partners">
 		<meta name="twitter:title" content="JOFI &amp; Partners — Firma Hukum">
 		<meta name="twitter:description" content="Kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas dan solusi yang dapat diandalkan.">
-		<meta name="twitter:image" content="{{ asset('images/logo-2.png') }}"> --}}
-
+		<meta name="twitter:image" content="{{ asset('images/logo-2.png') }}">	
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<!-- Favicons: currently using `logo.png` as a fallback. Replace with properly-sized favicon files for best results. -->
@@ -297,11 +298,11 @@
 							<div class="fw-semibold text-dark">PT Andalusia Nur Ramadhan</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					{{-- <div class="col-md-6 col-lg-3">
 						<div class="border rounded-4 shadow-soft p-4 h-100 text-center">
 							<div class="fw-semibold text-dark">PT Evlogia Inc Asset</div>
 						</div>
-					</div>
+					</div> --}}
 					<div class="col-md-6 col-lg-3">
 						<div class="border rounded-4 shadow-soft p-4 h-100 text-center">
 							<div class="fw-semibold text-dark">PT Oak Biotechnologies Indonesia</div>
@@ -377,12 +378,49 @@
 			</div>
 		</footer>
 
-		<!-- Bootstrap 5 JS (CDN) -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script>
-			// Tahun dinamis di footer
-			document.getElementById('year').textContent = new Date().getFullYear();
-		</script>
-	</body>
-	</html>
+	<!-- Bootstrap 5 JS (CDN) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<!-- JSON-LD Structured Data for Google Search -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "LegalService",
+		"name": "JOFI & Partners",
+		"alternateName": "JOFI and Partners Law Firm",
+		"url": "{{ url('/') }}",
+		"logo": "{{ asset('images/logo-2.png') }}",
+		"image": "{{ asset('images/logo-2.png') }}",
+		"description": "JOFI & Partners adalah kantor hukum profesional yang memberikan layanan litigasi dan non-litigasi dengan integritas, pendekatan strategis, dan dedikasi tinggi untuk kepentingan klien.",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Gd. Ganeca Blok I Lt. 4, Jl. KH Guru Amin No.234, Duren Tiga, Pancoran",
+			"addressLocality": "Jakarta Selatan",
+			"addressRegion": "DKI Jakarta",
+			"postalCode": "12760",
+			"addressCountry": "ID"
+		},
+		"contactPoint": {
+			"@type": "ContactPoint",
+			"telephone": "+62-811-8952-200",
+			"contactType": "customer service",
+			"email": "partners@jofiandpartners.com",
+			"availableLanguage": ["Indonesian", "English"]
+		},
+		"sameAs": [
+			"https://wa.me/628118952200"
+		],
+		"priceRange": "$$",
+		"areaServed": {
+			"@type": "Country",
+			"name": "Indonesia"
+		}
+	}
+	</script>
 
+	<script>
+		// Tahun dinamis di footer
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
